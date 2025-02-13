@@ -1,5 +1,6 @@
 # reto_IM
 
+```markdown
 # FastAPI con Docker, Swagger y Autenticación JWT
 
 Esta aplicación es un ejemplo de API creada con FastAPI que utiliza autenticación con JWT. Incluye endpoints para obtener productos y un Dockerfile para empaquetarla en un contenedor.
@@ -89,3 +90,22 @@ http://localhost:8000/products/products_id?product_id=1
 ```
 
 (Reemplaza `1` por el ID del producto que deseas consultar.)
+
+## Pruebas Unitarias
+
+Las pruebas unitarias están implementadas en el archivo `test_main.py` utilizando `pytest` y el `TestClient` de FastAPI. No es necesario tener la API ejecutándose en un servidor para correr las pruebas, ya que `TestClient` simula un servidor en memoria y ejecuta la aplicación internamente.
+
+### Ejecutar las Pruebas
+
+Asegúrate de tener instaladas las dependencias de desarrollo, incluyendo `pytest` (puedes agregarlas a tu `requirements.txt` o instalarlo de forma global):
+
+```bash
+pip install pytest
+```
+
+Ejecuta las pruebas desde la raíz del proyecto:
+
+```bash
+pytest
+```
+```
