@@ -93,7 +93,7 @@ http://localhost:8000/products/products_id?product_id=1
 
 ## Pruebas Unitarias
 
-Las pruebas unitarias están implementadas en el archivo `test_main.py` utilizando `pytest` y el `TestClient` de FastAPI. No es necesario tener la API ejecutándose en un servidor para correr las pruebas, ya que `TestClient` simula un servidor en memoria y ejecuta la aplicación internamente.
+Las pruebas unitarias están implementadas en el archivo `unit_test.py` utilizando `pytest` y el `TestClient` de FastAPI. No es necesario tener la API ejecutándose en un servidor para correr las pruebas, ya que `TestClient` simula un servidor en memoria y ejecuta la aplicación internamente.
 
 ### Ejecutar las Pruebas
 
@@ -106,6 +106,5 @@ pip install pytest
 Ejecuta las pruebas desde la raíz del proyecto:
 
 ```bash
-pytest
-```
+pytest -v unit_test.py
 ```
