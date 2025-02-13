@@ -24,7 +24,7 @@ docker build -t fastapi_app .
 ```
 
 ```bash
-docker run -p 8000:8000 my_fastapi_app
+docker run -p 8000:8000 fastapi_app
 ```
 
 La aplicación estará disponible en: [http://localhost:8000](http://localhost:8000)
