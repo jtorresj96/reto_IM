@@ -1,6 +1,6 @@
 # reto_IM
 
-```markdown
+
 # FastAPI con Docker, Swagger y Autenticación JWT
 
 Esta aplicación es un ejemplo de API creada con FastAPI que utiliza autenticación con JWT. Incluye endpoints para obtener productos y un Dockerfile para empaquetarla en un contenedor.
