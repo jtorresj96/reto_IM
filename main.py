@@ -53,11 +53,14 @@ def get_products(min_price: float = Query(None, description="Minimum price"), ma
 def get_product(product_id: int, user: str = Depends(get_current_user)):
     try:
         product = client.get_product_by_id(product_id)
+        if product is None:
+            raise HTTPException(status_code=404, detail="Product not found")
+        return product
+    except HTTPException:
+        raise
     except Exception as e:
         logging.error(f"Error fetching product: {e}")
         raise HTTPException(status_code=500, detail="Error retrieving product")
-    return product
-
 
 
 if __name__ == "__main__":
